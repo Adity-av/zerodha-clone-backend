@@ -15,10 +15,17 @@ const uri = process.env.MONGO_URL;
 const app = express();
 
 
-app.use(cors({
-  origin: "https://zerodha-clonefrontend.netlify.app",
-  credentials: true
-}));
+const allowedOrigins = [
+  "https://zerodha-clonefrontend.netlify.app",
+  "http://localhost:3000",
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 // app.get("/addPositions", async (req, res) => {
 //   let tempPositions = [
