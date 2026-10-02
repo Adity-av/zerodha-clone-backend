@@ -17,6 +17,7 @@ const app = express();
 
 const allowedOrigins = [
   "https://zerodha-clonefrontend.netlify.app",
+  "https://zerodhaclonedashboardd.netlify.app",
   "http://localhost:3000",
 ];
 
